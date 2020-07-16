@@ -1,0 +1,10 @@
+jupyter
+tensorflow
+tensorflow-datasets
+tensorflow-hub
+matplotlib
+sklearn
+numpy
+requests
+PILLOW
+opencv-python

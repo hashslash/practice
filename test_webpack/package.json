@@ -1,0 +1,19 @@
+{
+  "name": "test_webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "dev": "npm run webpack -- --mode development --watch",
+    "prod": "npm rnu webpack -- --mode production",
+    "debug": "node inspect --inspect-brk ./node_modules/webpack/bin/webpack",
+    "dev:debug": "npm run debug ./dist/main.js -- --mode development"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  }
+}

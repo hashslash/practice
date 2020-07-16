@@ -1,0 +1,385 @@
+{
+	"info": {
+		"_postman_id": "6eea9af4-d321-4ba9-8296-f3923451b2e5",
+		"name": "JSD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "General",
+			"item": [
+				{
+					"name": "Clients",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/clients",
+						"description": "Get all Clients"
+					},
+					"response": [
+						{
+							"name": "Clients",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{url}}/clients"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 01 Jun 2020 07:07:04 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"SUCCESS\",\n    \"statusCode\": \"200\",\n    \"data\": [\n        {\n            \"id\": 27,\n            \"dispensingType\": \"pdx\",\n            \"clientName\": \"MeijerUAT\",\n            \"clientIdentifier\": \"meijer_uat\"\n        },\n        {\n            \"id\": 62,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"Bi-MartTest\",\n            \"clientIdentifier\": \"bimart_uat\"\n        },\n        {\n            \"id\": 42,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"AveraTest\",\n            \"clientIdentifier\": \"avera_uat\"\n        },\n        {\n            \"id\": 35,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"FairviewTest\",\n            \"clientIdentifier\": \"fairview_uat\"\n        },\n        {\n            \"id\": 20,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"RaleysTest\",\n            \"clientIdentifier\": \"raleys_uat\"\n        },\n        {\n            \"id\": 21,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"InglesTest\",\n            \"clientIdentifier\": \"ingles_uat\"\n        },\n        {\n            \"id\": 23,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"ReasorsTest\",\n            \"clientIdentifier\": \"reasors_uat\"\n        },\n        {\n            \"id\": 71,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"Nebraska MedicineTest\",\n            \"clientIdentifier\": \"nebraska_uat\"\n        },\n        {\n            \"id\": 37,\n            \"dispensingType\": \"pdx\",\n            \"clientName\": \"WeisTest\",\n            \"clientIdentifier\": \"weis_uat\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/clients/bimart_uat/jobs"
+					},
+					"response": []
+				},
+				{
+					"name": "Get  Jobs by type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/clients/bimart_uat/jobs?type=Scheduled",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clients",
+								"bimart_uat",
+								"jobs"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Scheduled"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client Job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/clients/bimart_uat/jobs/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Client",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/clients/bimart_uat",
+						"description": "Get one Client"
+					},
+					"response": []
+				},
+				{
+					"name": "Histories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/clients/bimart_uat/jobs/1/histories?start=1&limit=5",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clients",
+								"bimart_uat",
+								"jobs",
+								"1",
+								"histories"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Scheduler Info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/clients/bimart_uat/scheduler-info"
+					},
+					"response": [
+						{
+							"name": "Scheduler Info Example",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:8080/clients/bimart_uat/scheduler-info"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 29 May 2020 07:43:23 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"SUCCESS\",\n    \"statusCode\": \"200\",\n    \"data\": {\n        \"name\": \"QuartzScheduler\",\n        \"instanceId\": \"NON_CLUSTERED\",\n        \"summary\": \"Quartz Scheduler (v2.0.1) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'\\n  Scheduler class: 'org.quartz.impl.RemoteScheduler' - access via RMI.\\n  Running since: Fri May 29 12:59:03 IST 2020\\n  Not currently in standby mode.\\n  Number of jobs executed: 39\\n  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.\\n  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.\\n\",\n        \"standby\": false\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "is Paused",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/clients/bimart_uat/jobs/1/is-paused"
+					},
+					"response": []
+				},
+				{
+					"name": "Executing jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/clients/bimart_uat/executing-jobs"
+					},
+					"response": []
+				},
+				{
+					"name": "Groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/clients/bimart_uat/groups"
+					},
+					"response": []
+				},
+				{
+					"name": "Statuses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/clients/bimart_uat/statuses"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Schedule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{url}}/clients/bimart_uat/jobs/2000/pause"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Cron",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"expression\":\"* * * * *\",\n\t\"group\":\"Hourly\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/clients/bimart_uat/jobs/1/cron",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clients",
+								"bimart_uat",
+								"jobs",
+								"1",
+								"cron"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": " ",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Cron Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"group\":\"Hourly\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/clients/bimart_uat/jobs/1/group",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"clients",
+								"bimart_uat",
+								"jobs",
+								"1",
+								"group"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": " ",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "80e88929-ee78-462b-b0c6-42154ea079de",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "34807af9-3983-404c-9bc5-73888d87ce78",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "b037a307-fea8-4e29-bdc9-3c4ba6db553f",
+			"key": "url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

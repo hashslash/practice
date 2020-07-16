@@ -1,0 +1,526 @@
+{
+	"id": "6eea9af4-d321-4ba9-8296-f3923451b2e5",
+	"name": "JSD",
+	"description": "",
+	"auth": null,
+	"events": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "80e88929-ee78-462b-b0c6-42154ea079de",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "34807af9-3983-404c-9bc5-73888d87ce78",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variables": [
+		{
+			"key": "url",
+			"value": "http://localhost:8080",
+			"disabled": false
+		}
+	],
+	"order": [],
+	"folders_order": [
+		"86a653dc-d631-401b-b90b-9987e581130b",
+		"0b7c9596-ab3c-4056-91fd-196ddeb5addc"
+	],
+	"protocolProfileBehavior": {},
+	"folders": [
+		{
+			"id": "0b7c9596-ab3c-4056-91fd-196ddeb5addc",
+			"name": "Admin",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6eea9af4-d321-4ba9-8296-f3923451b2e5",
+			"folder": null,
+			"order": [
+				"f8144542-0634-4a21-82bc-ea56e5d2b0bd",
+				"f89bf9ae-b853-4550-b74f-9ce26ff125c7",
+				"5a823ac9-e346-43e3-9fae-176e6a31d740"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"id": "86a653dc-d631-401b-b90b-9987e581130b",
+			"name": "General",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "6eea9af4-d321-4ba9-8296-f3923451b2e5",
+			"folder": null,
+			"order": [
+				"4b5b63e4-3cb4-47bb-9bfd-0eb9bbf9bdbd",
+				"fce6dfed-8d85-4d98-99fa-58ddef749d95",
+				"2b424462-916f-4445-a6ba-3e1b6a3a322f",
+				"17951f33-d01d-4a77-b5cf-4c0f1cd75ad3",
+				"5b371343-2c76-4052-9aa8-d418c3e5e50d",
+				"86441af2-84d5-4ea5-a57e-9cc2b65ee4d9",
+				"0171a544-22c0-4450-9817-82df61e0140d",
+				"2bf0e551-10ea-43a9-9b86-6ec560a948fd",
+				"77a58c83-8136-4fea-bc80-4eee8288887b",
+				"54de633a-e48a-45da-8723-3b056ecff564",
+				"21e8c51f-fdb7-4646-8197-cd78b3135d38"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"requests": [
+		{
+			"id": "0171a544-22c0-4450-9817-82df61e0140d",
+			"name": "Scheduler Info",
+			"url": "{{url}}/clients/bimart_uat/scheduler-info",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"responses": [
+				{
+					"id": "98d656c8-8403-4999-ab5c-655153ad7d7a",
+					"name": "Scheduler Info Example",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"status\": \"SUCCESS\",\n    \"statusCode\": \"200\",\n    \"data\": {\n        \"name\": \"QuartzScheduler\",\n        \"instanceId\": \"NON_CLUSTERED\",\n        \"summary\": \"Quartz Scheduler (v2.0.1) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'\\n  Scheduler class: 'org.quartz.impl.RemoteScheduler' - access via RMI.\\n  Running since: Fri May 29 12:59:03 IST 2020\\n  Not currently in standby mode.\\n  Number of jobs executed: 39\\n  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 20 threads.\\n  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.\\n\",\n        \"standby\": false\n    }\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": null,
+						"dataMode": null,
+						"dataOptions": null,
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "localhost:8080/clients/bimart_uat/scheduler-info"
+					},
+					"headers": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 May 2020 07:43:23 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookies": null,
+					"request": "0171a544-22c0-4450-9817-82df61e0140d",
+					"collection": "6eea9af4-d321-4ba9-8296-f3923451b2e5"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "17951f33-d01d-4a77-b5cf-4c0f1cd75ad3",
+			"name": "Get Client Job",
+			"url": "{{url}}/clients/bimart_uat/jobs/1",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "21e8c51f-fdb7-4646-8197-cd78b3135d38",
+			"name": "Statuses",
+			"url": "{{url}}/clients/bimart_uat/statuses",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "2b424462-916f-4445-a6ba-3e1b6a3a322f",
+			"name": "Get  Jobs by type",
+			"url": "{{url}}/clients/bimart_uat/jobs?type=Scheduled",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "type",
+					"value": "Scheduled",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "2bf0e551-10ea-43a9-9b86-6ec560a948fd",
+			"name": "is Paused",
+			"url": "{{url}}/clients/bimart_uat/jobs/1/is-paused",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "4b5b63e4-3cb4-47bb-9bfd-0eb9bbf9bdbd",
+			"name": "Clients",
+			"url": "{{url}}/clients",
+			"description": "Get all Clients",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"responses": [
+				{
+					"id": "7abf0b4a-7b44-43ff-bc3f-30adbd0d2d70",
+					"name": "Clients",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n    \"status\": \"SUCCESS\",\n    \"statusCode\": \"200\",\n    \"data\": [\n        {\n            \"id\": 27,\n            \"dispensingType\": \"pdx\",\n            \"clientName\": \"MeijerUAT\",\n            \"clientIdentifier\": \"meijer_uat\"\n        },\n        {\n            \"id\": 62,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"Bi-MartTest\",\n            \"clientIdentifier\": \"bimart_uat\"\n        },\n        {\n            \"id\": 42,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"AveraTest\",\n            \"clientIdentifier\": \"avera_uat\"\n        },\n        {\n            \"id\": 35,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"FairviewTest\",\n            \"clientIdentifier\": \"fairview_uat\"\n        },\n        {\n            \"id\": 20,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"RaleysTest\",\n            \"clientIdentifier\": \"raleys_uat\"\n        },\n        {\n            \"id\": 21,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"InglesTest\",\n            \"clientIdentifier\": \"ingles_uat\"\n        },\n        {\n            \"id\": 23,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"ReasorsTest\",\n            \"clientIdentifier\": \"reasors_uat\"\n        },\n        {\n            \"id\": 71,\n            \"dispensingType\": \"mck\",\n            \"clientName\": \"Nebraska MedicineTest\",\n            \"clientIdentifier\": \"nebraska_uat\"\n        },\n        {\n            \"id\": 37,\n            \"dispensingType\": \"pdx\",\n            \"clientName\": \"WeisTest\",\n            \"clientIdentifier\": \"weis_uat\"\n        }\n    ]\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": null,
+						"dataMode": null,
+						"dataOptions": null,
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "{{url}}/clients"
+					},
+					"headers": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Jun 2020 07:07:04 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookies": null,
+					"request": "4b5b63e4-3cb4-47bb-9bfd-0eb9bbf9bdbd",
+					"collection": "6eea9af4-d321-4ba9-8296-f3923451b2e5"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "54de633a-e48a-45da-8723-3b056ecff564",
+			"name": "Groups",
+			"url": "{{url}}/clients/bimart_uat/groups",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "5a823ac9-e346-43e3-9fae-176e6a31d740",
+			"name": "Edit Cron Copy",
+			"url": "{{url}}/clients/bimart_uat/jobs/1/group",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "",
+					"value": " ",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "",
+					"value": null,
+					"equals": false,
+					"description": null,
+					"enabled": false
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": "0b7c9596-ab3c-4056-91fd-196ddeb5addc",
+			"rawModeData": "{\n\t\"group\":\"Hourly\"\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "5b371343-2c76-4052-9aa8-d418c3e5e50d",
+			"name": "Get Client",
+			"url": "{{url}}/clients/bimart_uat",
+			"description": "Get one Client",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"pathVariables": {}
+		},
+		{
+			"id": "77a58c83-8136-4fea-bc80-4eee8288887b",
+			"name": "Executing jobs",
+			"url": "{{url}}/clients/bimart_uat/executing-jobs",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "86441af2-84d5-4ea5-a57e-9cc2b65ee4d9",
+			"name": "Histories",
+			"url": "{{url}}/clients/bimart_uat/jobs/1/histories?start=1&limit=5",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "start",
+					"value": "1",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				},
+				{
+					"key": "limit",
+					"value": "5",
+					"equals": true,
+					"description": null,
+					"enabled": true
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "f8144542-0634-4a21-82bc-ea56e5d2b0bd",
+			"name": "Schedule",
+			"url": "{{url}}/clients/bimart_uat/jobs/2000/pause",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "0b7c9596-ab3c-4056-91fd-196ddeb5addc",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "f89bf9ae-b853-4550-b74f-9ce26ff125c7",
+			"name": "Edit Cron",
+			"url": "{{url}}/clients/bimart_uat/jobs/1/cron",
+			"description": "",
+			"data": [],
+			"dataOptions": {
+				"raw": {
+					"language": "json"
+				}
+			},
+			"dataMode": "raw",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [
+				{
+					"key": "",
+					"value": " ",
+					"equals": true,
+					"description": null,
+					"enabled": false
+				},
+				{
+					"key": "",
+					"value": null,
+					"equals": false,
+					"description": null,
+					"enabled": false
+				}
+			],
+			"auth": null,
+			"events": [],
+			"folder": "0b7c9596-ab3c-4056-91fd-196ddeb5addc",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true
+				}
+			},
+			"rawModeData": "{\n\t\"expression\":\"* * * * *\",\n\t\"group\":\"Hourly\"\n}",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "fce6dfed-8d85-4d98-99fa-58ddef749d95",
+			"name": "Get All Jobs",
+			"url": "{{url}}/clients/bimart_uat/jobs",
+			"description": "",
+			"data": null,
+			"dataOptions": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": "86a653dc-d631-401b-b90b-9987e581130b",
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}

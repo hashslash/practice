@@ -1,0 +1,33 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#215731",
+        "activityBar.activeBorder": "#1a122e",
+        "activityBar.background": "#215731",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#1a122e",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#13321c",
+        "statusBar.border": "#13321c",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#215731",
+        "titleBar.activeBackground": "#13321c",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.border": "#13321c",
+        "titleBar.inactiveBackground": "#13321c99",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#13321c",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.dart_tool": true,
+        "**/.idea": true,
+        "**/.packages": true,
+        "**/*.iml": true
+    },
+    "explorerExclude.backup": null
+}
